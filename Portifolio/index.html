@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Beatriz">
+    <title>Programação Web Front-End</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="titulo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="Aula1.html">Aula 1</a></li>
+                    <li><a href="exercicios">Aula 2</a></li>
+                    <li><a href="exercicios">Aula 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>A Arte do Front-End</h2>
+            <p>
+                Front-End é muito mais do que código. É criatividade, inovação e a capacidade de transformar ideias em realidade.  
+                Cada cor, animação e interação cria uma experiência única, tornando a web mais viva e acessível.  
+                Quando você cria uma página, não está apenas programando – está moldando o futuro digital.  
+            </p>
+
+            <p>
+                O que faz um site ser incrível? Não é apenas seu design, mas como ele **conecta as pessoas**.  
+                Um bom desenvolvedor front-end dá vida às interfaces, tornando a navegação intuitiva e agradável.  
+                O impacto do seu trabalho pode estar na próxima grande plataforma, app ou projeto inovador!  
+            </p>
+
+            <p>
+                Quer embarcar nessa jornada e criar experiências memoráveis? O Front-End é o caminho! 🚀
+            </p>
+
+            <button class="btn" onclick="exibirMensagem()">Descubra Mais</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Beatriz Dutra de Campos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de digitação no título
+        const titulo = document.getElementById("titulo");
+        const texto = "Front-End: Onde Criatividade Encontra Tecnologia";
+        let index = 0;
+
+        function escreverTexto() {
+            titulo.innerText = texto.substring(0, index);
+            index++;
+            if (index <= texto.length) {
+                setTimeout(escreverTexto, 80);
+            }
+        }
+        escreverTexto();
+
+        // Mensagem ao clicar no botão
+        function exibirMensagem() {
+            alert('O futuro da web começa com você! 🌍✨');
+        }
+    </script>
+</body>
+</html>
